@@ -92,6 +92,7 @@ function AddData() {
                         </li>
                         <li><a href="http://localhost:3000/about">About</a></li>
                         <li><a href="http://localhost:3000/contact">Contact</a></li>
+                   
                     </ul>
                 </nav>
                 </div>
