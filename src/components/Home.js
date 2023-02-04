@@ -37,8 +37,8 @@ render(){
             <div class="wrapper-header">
                 <nav class="secondary-nav">
                     <ul class="secondary-nav-contact">
-                        <li><i><FontAwesomeIcon icon={faPhone} className="fa-solid" color='rgb(245,245,245' size='lg'></FontAwesomeIcon></i><a href="#">Text/Viber: 09263524939</a></li>
-                        <li><i><FontAwesomeIcon icon={faEnvelope} className="fa-solid" color='rgb(245,245,245' size='lg'></FontAwesomeIcon></i><a href="#">pcadrchelpdesk@mail.pca.gov.ph</a></li>
+                        <li><i><FontAwesomeIcon icon={faPhone} className="fa-solid" color='rgb(245,245,245' size='lg'></FontAwesomeIcon></i><a href="https://www.viber.com/en/?utm_source=des_w&utm_medium=w8&utm_term=4226&utm_content=dlg">Text/Viber: 09263524939</a></li>
+                        <li><i><FontAwesomeIcon icon={faEnvelope} className="fa-solid" color='rgb(245,245,245' size='lg'></FontAwesomeIcon></i><a href="https://mail.google.com/mail/u/0/#inbox">pcadrchelpdesk@mail.pca.gov.ph</a></li>
                     </ul>
                     <ul class="secondary-nav-login">
                         <li><i><FontAwesomeIcon icon={faLock} className="fa-solid" color='rgb(245,245,245' size='lg'></FontAwesomeIcon></i><a href="http://localhost:3000/login">LOGIN</a></li>
@@ -56,10 +56,10 @@ render(){
                         </Dropdown.Toggle>
 
                         <Dropdown.Menu>
-                        <Dropdown.Item href="#">Coconut Pests</Dropdown.Item>
+                        <Dropdown.Item href="http://localhost:3000/admin">Coconut Pests</Dropdown.Item>
                         <Dropdown.Item href="#">Coconut</Dropdown.Item>
                         <Dropdown.Item href="#">Diseases</Dropdown.Item>
-                        <Dropdown.Item href="#">Management</Dropdown.Item>
+                        <Dropdown.Item href="http://localhost:3000/admin">Management</Dropdown.Item>
                         </Dropdown.Menu>
                         </Dropdown>
                         </li>
@@ -94,9 +94,9 @@ render(){
                 <nav class="side-nav-bar">
                     <h1>RESOURCES</h1>
                     <ul>
-                        <li><a href="">COCONUT PESTS</a></li>
+                        <li><a href="http://localhost:3000/admin">COCONUT PESTS</a></li>
                         <li><a href="">COCONUT DISEASES</a></li>
-                        <li><a href="">MANAGEMENT</a></li>
+                        <li><a href="http://localhost:3000/admin">MANAGEMENT</a></li>
                         <li><a href="">STATISTICS</a></li>
                     </ul>
                 </nav>

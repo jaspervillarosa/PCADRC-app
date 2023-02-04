@@ -58,8 +58,8 @@ function handleClick(event){
         <div class="wrapper-header">
             <nav class="secondary-nav">
                 <ul class="secondary-nav-contact">
-                    <li><i><FontAwesomeIcon icon={faPhone} className="fa-solid" color='rgb(245,245,245' size='lg'></FontAwesomeIcon></i><a href="#">Text/Viber: 09263524939</a></li>
-                    <li><i><FontAwesomeIcon icon={faEnvelope} className="fa-solid" color='rgb(245,245,245' size='lg'></FontAwesomeIcon></i><a href="#">pcadrchelpdesk@mail.pca.gov.ph</a></li>
+                    <li><i><FontAwesomeIcon icon={faPhone} className="fa-solid" color='rgb(245,245,245' size='lg'></FontAwesomeIcon></i><a href="https://www.viber.com/en/?utm_source=des_w&utm_medium=w8&utm_term=4226&utm_content=dlg">Text/Viber: 09263524939</a></li>
+                    <li><i><FontAwesomeIcon icon={faEnvelope} className="fa-solid" color='rgb(245,245,245' size='lg'></FontAwesomeIcon></i><a href="https://mail.google.com/mail/u/0/#inbox">pcadrchelpdesk@mail.pca.gov.ph</a></li>
                 </ul>
                 <ul class="secondary-nav-login">
                     <li><i><FontAwesomeIcon icon={faLock} className="fa-solid" color='rgb(245,245,245' size='lg'></FontAwesomeIcon></i><a href="http://localhost:3000/admin">LOGIN</a></li>
@@ -77,10 +77,10 @@ function handleClick(event){
                     </Dropdown.Toggle>
 
                     <Dropdown.Menu>
-                    <Dropdown.Item href="#">Coconut Pests</Dropdown.Item>
+                    <Dropdown.Item href="http://localhost:3000/admin">Coconut Pests</Dropdown.Item>
                     <Dropdown.Item href="#">Coconut</Dropdown.Item>
                     <Dropdown.Item href="#">Diseases</Dropdown.Item>
-                    <Dropdown.Item href="#">Management</Dropdown.Item>
+                    <Dropdown.Item href="http://localhost:3000/admin">Management</Dropdown.Item>
                     </Dropdown.Menu>
                     </Dropdown>
                     </li>
@@ -312,7 +312,7 @@ const BigContainer = styled.div`
 `;
 
 const Logo = styled.div`
-    width: 24%;
+    width: 34%;
     display: flex;
     justify-content: left;
     img {
