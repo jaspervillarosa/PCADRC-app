@@ -9,6 +9,7 @@ import Admin from './components/Admin';
 import Login from './components/Login';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import AddDisease from './components/AddDisease';
+import SignUp from './components/SignUp';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
             <Route path='/add-data' element={<AddData/>}></Route>
             <Route path='/login' element={<Login/>}></Route>
             <Route path='/add-disease' element={<AddDisease/>}></Route>
+            <Route path='/signup' element={<SignUp/>}></Route>
           </Routes>
         </Container>
       </Router>

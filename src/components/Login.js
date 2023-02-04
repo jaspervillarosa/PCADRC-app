@@ -84,17 +84,17 @@ function Login() {
                     <img src='./PCA.png'></img>
                 </Logo>
                 <InputContainer>
-                    <input type={'email'} placeholder='jvillarosa@up.edu.ph' />
+                    <input type={'email'} placeholder='Username' />
                 </InputContainer>
                 <InputContainer>
-                    <input type={'password'} placeholder='******' />
+                    <input type={'password'} placeholder='Password' />
                 </InputContainer>
                 <InputContainer>
                     <button><a href="http://localhost:3000/admin">Login</a></button>
                 </InputContainer>
             </Form>
             <SignupContainer>
-                <p>Don't have an account ? <span>Sign Up</span> </p>
+                <p> Don't have an account ? <a href="http://localhost:3000/signup"><span>Sign Up</span></a> </p>
             </SignupContainer>
             </div>
         <section class="accordion-pcadrc">
@@ -260,12 +260,22 @@ const SignupContainer = styled.div`
 
     p{
         font-size: 14px;
-        span{
+        a{
+            text-decoration: none;
+            
+            span{
             color: #18a4f8;
+            font-weight: 600;
+            cursor: pointer;
+            }
+        }
+        a:hover{
+            color: red;
             font-weight: 600;
             cursor: pointer;
         }
     }
+
 `;
 
 export default Login

@@ -14,6 +14,7 @@ mongoose.connect('mongodb+srv://jaspervillarosa:weelspargo@villarosacluster.pcl7
 // require route 
 app.use('/', require("./routes/addDataRoute"));
 app.use('/', require("./routes/addFarmerRoute"));
+app.use('/', require("./routes/signupRoute"));
 
 app.listen(3001, function(){
     console.log("Express is running at port 3001")

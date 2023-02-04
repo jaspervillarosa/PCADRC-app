@@ -1,7 +1,7 @@
 @mixin mainpage-style {
 
     .wrapper-header {
-        margin: auto;  
+        margin: auto; 
         .secondary-nav{
             display: grid;
             background-color: var(--clr-accent-400);
@@ -72,10 +72,13 @@
                 font-size: var(--fs-100);
                 font-weight: var(--fw-bold);
                 padding-left: 2.5rem;
-                padding-top: 10px;
+                padding-top: 0px;
+                margin: 0px;
                 a{
                     text-decoration: none;
                     color: var(--clr-primary-500);
+                    margin-top: 0rem;
+                    padding: 0;
                 }
             }
             .primary-nav{
@@ -84,6 +87,7 @@
                 margin: 0;
                 padding-top: 5px;
                 ul{
+                    align-items: center;
                     display: unset;
                     display: flex;
                     list-style-type: none;
@@ -96,7 +100,7 @@
                             color: var(--clr-primary-500);
                             font-weight: var(--fw-bold);
                             padding-bottom:.75rem;
-                            padding-top: 0rem;
+                            padding-top: 0.75rem;
                             margin: 0;
                             transition: background-color 0.3s;
                             background-color: transparent;
@@ -105,7 +109,7 @@
                                 background-color: var(--clr-primary-50);
                                 // color: var(--clr-neutral-400);
                                 padding-bottom: .75rem;
-                                padding-top: 0rem;
+                                padding-top: 0.75rem;
                                 padding-inline: 0.25rem;
                                 border: solid transparent;
                          }  
@@ -117,15 +121,15 @@
                             font-size: var(--fs-body);
                             color: var(--clr-primary-500);
                             font-weight: var(--fw-bold);
-                            padding-bottom: 1.5rem;
-                            padding-top: 0.5rem;
+                            padding-bottom: 1rem;
+                            padding-top: 1rem;
                             transition: background-color 0.3s;
                             background-color: transparent;
                             padding-inline: 1rem;
                             &:hover{
                                 background-color: var(--clr-primary-50);
-                                padding-bottom: 1.5rem;
-                                padding-top: 0.5rem;
+                                padding-bottom: 1rem;
+                                padding-top: 1rem;
                                 padding-inline: 1rem;
                                
                             }
