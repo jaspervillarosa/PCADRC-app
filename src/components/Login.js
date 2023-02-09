@@ -7,7 +7,7 @@ import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import 'bootstrap/dist/css/bootstrap.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faEnvelope, faPhone, faLock, faUnlock } from '@fortawesome/free-solid-svg-icons';
+import { faEnvelope, faPhone, faLock, faUnlock, faBars } from '@fortawesome/free-solid-svg-icons';
 import { faFacebook, faInstagram, faTwitter } from '@fortawesome/free-brands-svg-icons';
 import '../styles/Contact.css'
 import Dropdown from 'react-bootstrap/Dropdown';
@@ -18,15 +18,19 @@ function Login() {
         <Main>
         <header class="primary-header">
             <div class="wrapper-header">
-                <nav class="secondary-nav">
-                    <ul class="secondary-nav-contact">
-                        <li><i><FontAwesomeIcon icon={faPhone} className="fa-solid" color='rgb(245,245,245' size='lg'></FontAwesomeIcon></i><a href="https://www.viber.com/en/?utm_source=des_w&utm_medium=w8&utm_term=4226&utm_content=dlg">Text/Viber: 09263524939</a></li>
-                        <li><i><FontAwesomeIcon icon={faEnvelope} className="fa-solid" color='rgb(245,245,245' size='lg'></FontAwesomeIcon></i><a href="https://mail.google.com/mail/u/0/#inbox">pcadrchelpdesk@mail.pca.gov.ph</a></li>
-                    </ul>
-                    <ul class="secondary-nav-login">
-                        <li><i><FontAwesomeIcon icon={faLock} className="fa-solid" color='rgb(245,245,245' size='lg'></FontAwesomeIcon></i><a href="http://localhost:3000/admin">LOGIN</a></li>
-                    </ul>
-                </nav>
+                <div class="secondary-nav-wrapper">
+                    <nav class="secondary-nav">
+                        <ul class="secondary-nav-contact">
+                            <li><i><FontAwesomeIcon icon={faPhone} className="fa-solid" color='rgb(245,245,245' size='lg'></FontAwesomeIcon></i><a href="https://www.viber.com/en/?utm_source=des_w&utm_medium=w8&utm_term=4226&utm_content=dlg">Text/Viber: 09263524939</a></li>
+                            <li><i><FontAwesomeIcon icon={faEnvelope} className="fa-solid" color='rgb(245,245,245' size='lg'></FontAwesomeIcon></i><a href="https://mail.google.com/mail/u/0/#inbox">pcadrchelpdesk@mail.pca.gov.ph</a></li>
+                        </ul>
+                        <ul class="secondary-nav-login">
+                            <li><i><FontAwesomeIcon icon={faLock} className="fa-solid" color='rgb(245,245,245' size='lg'></FontAwesomeIcon></i><a href="http://localhost:3000/login">LOGIN</a></li>
+                        </ul>
+                    </nav>
+        
+                </div>
+               
                 <div class="primary-nav-wrapper">
                      <h1 class="logo"><a href=""><img src="" alt=""></img>GOV.PH</a></h1>
                 <nav class="primary-nav">
@@ -50,15 +54,29 @@ function Login() {
                         <li><a href="http://localhost:3000/contact">Contact</a></li>
                     </ul>
                 </nav>
-                </div>
+                    {/* <div class="hamburger-Container"> */}
+                        <button class="hamburger-container-btn">
+                            <i><FontAwesomeIcon icon={faBars} className="faBars" color='rgb(245,245,245' size='lg'></FontAwesomeIcon></i>
+                         {/* <div onChange={handleChange} class="bars"></div> */}
+                        </button>
+                    {/* </div>  */}
+                </div>   
             </div>
         </header>
+        <nav class=" primary-nav-Mobile">
+                <ul>
+                    <li><a href="http://localhost:3000/">Home</a></li>
+                    <li><a href="">Resources</a></li>
+                    <li><a href="http://localhost:3000/about">About</a></li>
+                    <li><a href="http://localhost:3000/contact">Contact</a></li>
+                </ul>
+        </nav>
         <section class="pca-logo-section">
             <div class="wrapper-pca-logo">
                 <h1 class="pcaLogo"><a href="#"><img src="./pcalogo.png" alt=""></img></a></h1>
                 <div class="pca-logo-txt">
                     <h4>Department of Agriculture</h4>
-                    <h1 class="primaryHeader">PHILIPPINE COCONUT AUTHORITY</h1>
+                    <h4 class="primaryHeader">PHILIPPINE COCONUT AUTHORITY</h4>
                     <h4>PCA-DRC Compound, Bago Oshiro Tugbok, Davao City</h4>
                 </div>
             </div>
@@ -72,12 +90,6 @@ function Login() {
                 </div>
             </div>
         </section>
-            {/* <div>
-                <PhoneImg>
-                    <img src='./PCADRC.png'></img>
-                    <h5>PCADRC Region XI </h5>
-                </PhoneImg>
-            </div> */}
             <div>
             <Form>
                 <Logo>

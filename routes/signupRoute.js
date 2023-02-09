@@ -21,7 +21,7 @@ router.route('/signup').post((req, res) =>{
     newSignup.save();
 })
 
-router.route("/signup").get((req, res) =>{
+router.route("/admin").get((req, res) =>{
    SignUp.find()
         .then(foundUser => res.json(foundUser))
 })

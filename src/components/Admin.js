@@ -4,7 +4,7 @@ import '../styles/Styles.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/css/bootstrap.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faEnvelope, faPhone, faLock, faUnlock, faPencil, faTrash } from '@fortawesome/free-solid-svg-icons';
+import { faEnvelope, faPhone, faLock, faUnlock, faPencil, faTrash, faBars } from '@fortawesome/free-solid-svg-icons';
 import { faFacebook, faInstagram, faTwitter } from '@fortawesome/free-brands-svg-icons';
 import '../styles/Admin.css'
 import Table from 'react-bootstrap/Table';
@@ -43,17 +43,21 @@ function Admin() {
 
   return (
     <div className='Admin-page'>
-        <header class="primary-header">
+       <header class="primary-header">
             <div class="wrapper-header">
-                <nav class="secondary-nav">
-                    <ul class="secondary-nav-contact">
-                        <li><i><FontAwesomeIcon icon={faPhone} className="fa-solid" color='rgb(245,245,245' size='lg'></FontAwesomeIcon></i><a href="https://www.viber.com/en/?utm_source=des_w&utm_medium=w8&utm_term=4226&utm_content=dlg">Text/Viber: 09263524939</a></li>
-                        <li><i><FontAwesomeIcon icon={faEnvelope} className="fa-solid" color='rgb(245,245,245' size='lg'></FontAwesomeIcon></i><a href="https://mail.google.com/mail/u/0/#inbox">pcadrchelpdesk@mail.pca.gov.ph</a></li>
-                    </ul>
-                    <ul class="secondary-nav-login">
-                        <li><i><FontAwesomeIcon icon={faUnlock} className="fa-solid" color='rgb(245,245,245' size='lg'></FontAwesomeIcon></i><a href="http://localhost:3000">HELLO ADMIN</a></li>
-                    </ul>
-                </nav>
+                <div class="secondary-nav-wrapper">
+                    <nav class="secondary-nav">
+                        <ul class="secondary-nav-contact">
+                            <li><i><FontAwesomeIcon icon={faPhone} className="fa-solid" color='rgb(245,245,245' size='lg'></FontAwesomeIcon></i><a href="https://www.viber.com/en/?utm_source=des_w&utm_medium=w8&utm_term=4226&utm_content=dlg">Text/Viber: 09263524939</a></li>
+                            <li><i><FontAwesomeIcon icon={faEnvelope} className="fa-solid" color='rgb(245,245,245' size='lg'></FontAwesomeIcon></i><a href="https://mail.google.com/mail/u/0/#inbox">pcadrchelpdesk@mail.pca.gov.ph</a></li>
+                        </ul>
+                        <ul class="secondary-nav-login">
+                            <li><i><FontAwesomeIcon icon={faLock} className="fa-solid" color='rgb(245,245,245' size='lg'></FontAwesomeIcon></i><a href="http://localhost:3000/login">LOGIN</a></li>
+                        </ul>
+                    </nav>
+        
+                </div>
+               
                 <div class="primary-nav-wrapper">
                      <h1 class="logo"><a href=""><img src="" alt=""></img>GOV.PH</a></h1>
                 <nav class="primary-nav">
@@ -66,10 +70,10 @@ function Admin() {
                         </Dropdown.Toggle>
 
                         <Dropdown.Menu>
-                        <Dropdown.Item href="#">Coconut Pests</Dropdown.Item>
+                        <Dropdown.Item href="http://localhost:3000/admin">Coconut Pests</Dropdown.Item>
                         <Dropdown.Item href="#">Coconut</Dropdown.Item>
                         <Dropdown.Item href="#">Diseases</Dropdown.Item>
-                        <Dropdown.Item href="#">Management</Dropdown.Item>
+                        <Dropdown.Item href="http://localhost:3000/admin">Management</Dropdown.Item>
                         </Dropdown.Menu>
                         </Dropdown>
                         </li>
@@ -77,15 +81,29 @@ function Admin() {
                         <li><a href="http://localhost:3000/contact">Contact</a></li>
                     </ul>
                 </nav>
-                </div>
+                    {/* <div class="hamburger-Container"> */}
+                        <button class="hamburger-container-btn">
+                            <i><FontAwesomeIcon icon={faBars} className="faBars" color='rgb(245,245,245' size='lg'></FontAwesomeIcon></i>
+                         {/* <div onChange={handleChange} class="bars"></div> */}
+                        </button>
+                    {/* </div>  */}
+                </div>   
             </div>
         </header>
+        <nav class=" primary-nav-Mobile">
+                <ul>
+                    <li><a href="http://localhost:3000/">Home</a></li>
+                    <li><a href="">Resources</a></li>
+                    <li><a href="http://localhost:3000/about">About</a></li>
+                    <li><a href="http://localhost:3000/contact">Contact</a></li>
+                </ul>
+        </nav>
         <section class="pca-logo-section">
             <div class="wrapper-pca-logo">
                 <h1 class="pcaLogo"><a href="#"><img src="./pcalogo.png" alt=""></img></a></h1>
                 <div class="pca-logo-txt">
                     <h4>Department of Agriculture</h4>
-                    <h1 class="primaryHeader">PHILIPPINE COCONUT AUTHORITY</h1>
+                    <h4 class="primaryHeader">PHILIPPINE COCONUT AUTHORITY</h4>
                     <h4>PCA-DRC Compound, Bago Oshiro Tugbok, Davao City</h4>
                 </div>
             </div>
@@ -98,8 +116,6 @@ function Admin() {
                     <h1><a href=""><img src="./yt.png" alt=""></img></a></h1>
                 </div>
             </div>
-           
-
         </section>
 
         <section class="main-section-admin">
@@ -129,7 +145,7 @@ function Admin() {
                                 <button type="button" class="btn btn-success"><a href='http://localhost:3000/add-data'> <span> + </span>Add New Pest and or Disease</a></button>
                             </div>
                             <div class="table-datasets-wrapper">
-                            <Table striped >
+                            <Table responsive className='no-wrap-class' striped >
                             <thead >
                                 <tr>
                                 <th>Name</th>
@@ -192,7 +208,7 @@ function Admin() {
                         <button type="button" class="btn btn-success"> <a href='http://localhost:3000/add-disease'><span> + </span>List a Farmer</a></button>
                     </div>
                     <div class="table-datasets-wrapper">
-                        <table class="table">
+                        <Table responsive className='no-wrap-class' striped>
                             <thead>
                             <tr>
                                 <th scope="col">Farmer Name</th>
@@ -243,15 +259,16 @@ function Admin() {
                             </tr>
                             
                             </tbody>
-                        </table>
+                        </Table>
                     </div>
                 </div>
 
                     </div>
 
-                            </div>
+                            </div>             
+        </section>
+        <section class="table-mobile-nav">
 
-                            
         </section>
        
         <section class="logos">

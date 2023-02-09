@@ -7,7 +7,7 @@ import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import 'bootstrap/dist/css/bootstrap.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faEnvelope, faPhone, faLock, faUnlock } from '@fortawesome/free-solid-svg-icons';
+import { faEnvelope, faPhone, faLock, faUnlock, faBars } from '@fortawesome/free-solid-svg-icons';
 import { faFacebook, faInstagram, faTwitter } from '@fortawesome/free-brands-svg-icons';
 import '../styles/Contact.css'
 import Dropdown from 'react-bootstrap/Dropdown';
@@ -55,67 +55,79 @@ function handleClick(event){
     <Container>
     <Main>
     <header class="primary-header">
-        <div class="wrapper-header">
-            <nav class="secondary-nav">
-                <ul class="secondary-nav-contact">
-                    <li><i><FontAwesomeIcon icon={faPhone} className="fa-solid" color='rgb(245,245,245' size='lg'></FontAwesomeIcon></i><a href="https://www.viber.com/en/?utm_source=des_w&utm_medium=w8&utm_term=4226&utm_content=dlg">Text/Viber: 09263524939</a></li>
-                    <li><i><FontAwesomeIcon icon={faEnvelope} className="fa-solid" color='rgb(245,245,245' size='lg'></FontAwesomeIcon></i><a href="https://mail.google.com/mail/u/0/#inbox">pcadrchelpdesk@mail.pca.gov.ph</a></li>
-                </ul>
-                <ul class="secondary-nav-login">
-                    <li><i><FontAwesomeIcon icon={faLock} className="fa-solid" color='rgb(245,245,245' size='lg'></FontAwesomeIcon></i><a href="http://localhost:3000/admin">LOGIN</a></li>
-                </ul>
-            </nav>
-            <div class="primary-nav-wrapper">
-                 <h1 class="logo"><a href=""><img src="" alt=""></img>GOV.PH</a></h1>
-            <nav class="primary-nav">
+            <div class="wrapper-header">
+                <div class="secondary-nav-wrapper">
+                    <nav class="secondary-nav">
+                        <ul class="secondary-nav-contact">
+                            <li><i><FontAwesomeIcon icon={faPhone} className="fa-solid" color='rgb(245,245,245' size='lg'></FontAwesomeIcon></i><a href="https://www.viber.com/en/?utm_source=des_w&utm_medium=w8&utm_term=4226&utm_content=dlg">Text/Viber: 09263524939</a></li>
+                            <li><i><FontAwesomeIcon icon={faEnvelope} className="fa-solid" color='rgb(245,245,245' size='lg'></FontAwesomeIcon></i><a href="https://mail.google.com/mail/u/0/#inbox">pcadrchelpdesk@mail.pca.gov.ph</a></li>
+                        </ul>
+                        <ul class="secondary-nav-login">
+                            <li><i><FontAwesomeIcon icon={faLock} className="fa-solid" color='rgb(245,245,245' size='lg'></FontAwesomeIcon></i><a href="http://localhost:3000/login">LOGIN</a></li>
+                        </ul>
+                    </nav>
+        
+                </div>
+               
+                <div class="primary-nav-wrapper">
+                     <h1 class="logo"><a href=""><img src="" alt=""></img>GOV.PH</a></h1>
+                <nav class="primary-nav">
+                    <ul>
+                        <li><a href="http://localhost:3000/">Home</a></li>
+                        <li>
+                        <Dropdown>
+                        <Dropdown.Toggle class="dropdown" id="dropdown">
+                        Resources
+                        </Dropdown.Toggle>
+
+                        <Dropdown.Menu>
+                        <Dropdown.Item href="http://localhost:3000/admin">Coconut Pests</Dropdown.Item>
+                        <Dropdown.Item href="#">Coconut</Dropdown.Item>
+                        <Dropdown.Item href="#">Diseases</Dropdown.Item>
+                        <Dropdown.Item href="http://localhost:3000/admin">Management</Dropdown.Item>
+                        </Dropdown.Menu>
+                        </Dropdown>
+                        </li>
+                        <li><a href="http://localhost:3000/about">About</a></li>
+                        <li><a href="http://localhost:3000/contact">Contact</a></li>
+                    </ul>
+                </nav>
+                    {/* <div class="hamburger-Container"> */}
+                        <button class="hamburger-container-btn">
+                            <i><FontAwesomeIcon icon={faBars} className="faBars" color='rgb(245,245,245' size='lg'></FontAwesomeIcon></i>
+                         {/* <div onChange={handleChange} class="bars"></div> */}
+                        </button>
+                    {/* </div>  */}
+                </div>   
+            </div>
+        </header>
+        <nav class=" primary-nav-Mobile">
                 <ul>
                     <li><a href="http://localhost:3000/">Home</a></li>
-                    <li>
-                    <Dropdown>
-                    <Dropdown.Toggle class="dropdown" id="dropdown">
-                    Resources
-                    </Dropdown.Toggle>
-
-                    <Dropdown.Menu>
-                    <Dropdown.Item href="http://localhost:3000/admin">Coconut Pests</Dropdown.Item>
-                    <Dropdown.Item href="#">Coconut</Dropdown.Item>
-                    <Dropdown.Item href="#">Diseases</Dropdown.Item>
-                    <Dropdown.Item href="http://localhost:3000/admin">Management</Dropdown.Item>
-                    </Dropdown.Menu>
-                    </Dropdown>
-                    </li>
+                    <li><a href="">Resources</a></li>
                     <li><a href="http://localhost:3000/about">About</a></li>
                     <li><a href="http://localhost:3000/contact">Contact</a></li>
                 </ul>
-            </nav>
+        </nav>
+        <section class="pca-logo-section">
+            <div class="wrapper-pca-logo">
+                <h1 class="pcaLogo"><a href="#"><img src="./pcalogo.png" alt=""></img></a></h1>
+                <div class="pca-logo-txt">
+                    <h4>Department of Agriculture</h4>
+                    <h4 class="primaryHeader">PHILIPPINE COCONUT AUTHORITY</h4>
+                    <h4>PCA-DRC Compound, Bago Oshiro Tugbok, Davao City</h4>
+                </div>
             </div>
-        </div>
-    </header>
-    <section class="pca-logo-section">
-        <div class="wrapper-pca-logo">
-            <h1 class="pcaLogo"><a href="#"><img src="./pcalogo.png" alt=""></img></a></h1>
-            <div class="pca-logo-txt">
-                <h4>Department of Agriculture</h4>
-                <h1 class="primaryHeader">PHILIPPINE COCONUT AUTHORITY</h1>
-                <h4>PCA-DRC Compound, Bago Oshiro Tugbok, Davao City</h4>
-            </div>
-        </div>
 
-        <div class="philippineTime-wrapper">
-            <h5>Philippine Standard Time</h5>
-            <h5>Sunday, January 29, 2023</h5>
-            <div class="social-media-logos">
-                <h1><a href=""><img src="./fb.png" alt=""></img></a></h1>
-                <h1><a href=""><img src="./yt.png" alt=""></img></a></h1>
+            <div class="philippineTime-wrapper">
+                <h5>Philippine Standard Time</h5>
+                <h5>Sunday, January 29, 2023</h5>
+                <div class="social-media-logos">
+                    <h1><a href=""><img src="./fb.png" alt=""></img></a></h1>
+                    <h1><a href=""><img src="./yt.png" alt=""></img></a></h1>
+                </div>
             </div>
-        </div>
-    </section>
-        {/* <div>
-            <PhoneImg>
-                <img src='./PCADRC.png'></img>
-                <h5>PCADRC Region XI </h5>
-            </PhoneImg>
-        </div> */}
+        </section>
         <div>
         <Form>
             <Logo>
@@ -123,11 +135,11 @@ function handleClick(event){
             </Logo>
             <BigContainer>
                     <InputContainer>
-                        <input onChange={handleChange} value={input.lastName} name="firstName" type={'txt'} placeholder='First name' />
-                        <input onChange={handleChange} value={input.lastName} name="lastName" type={'txt'} placeholder='Last name' />
+                        <input onChange={handleChange} value={input.email} name="email"  type={'email'} placeholder='Username email' />
                     </InputContainer>
                     <InputContainer>
-                        <input onChange={handleChange} value={input.email} name="email"  type={'email'} placeholder='Username email' />
+                        <input onChange={handleChange} value={input.firstName} name="firstName" type={'txt'} placeholder='First name' />
+                        <input onChange={handleChange} value={input.lastName} name="lastName" type={'txt'} placeholder='Last name' />
                     </InputContainer>
                     <InputContainer class="password-container">
                         <input onChange={handleChange} value={input.password} name="password"  type={'password'} placeholder='Password' />
@@ -256,11 +268,14 @@ const Form = styled.form`
     padding-top: 2rem;
     diplay: flex;
     margin-top: 3rem;
-    margin-bottom: 2rem;
+    margin-bottom: 4rem;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+
 
     btn{
-        border: solid orange;
-        margin-top: 3rem;;
+        margin-top: 3rem;
     }
     .primary-btn{
  
@@ -300,25 +315,26 @@ const Form = styled.form`
         }
 
 
-    button:hover{
-        background-color: var(--clr-accent-500);
+    .sec-btn:hover{
+        background-color: var(--clr-icon-400);
     }
 `;
 
 const BigContainer = styled.div`
 
-    margin-top: 2rem;
+    margin-top: 1rem;
     
 `;
 
 const Logo = styled.div`
-    width: 34%;
+    width: 100%;
+    text-align:center;
     display: flex;
-    justify-content: left;
     img {
         width: 100%;
     }
     h1{
+        width: 100%;  
         font-size: var(--fs-200);
         font-weight: var(--fw-sem-bold);
     }

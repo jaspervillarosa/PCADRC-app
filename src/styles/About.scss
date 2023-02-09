@@ -1,20 +1,18 @@
 @mixin about-style{
+
     .main-section-about{
-        box-sizing: border-box;
-        display: grid;
-        grid-template-columns: auto 60% auto;
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        padding-inline: 0;
+        margin-top: 5rem;
+        margin-bottom: 4rem;
         .about-us-section{
-            width: 80%;
-            grid-column-start: 2;
-            grid-column-end: 3;
-            margin-top: 4rem;
-            // margin-right: 18rem;
             h2{
                 font-family: var(--ff-tertiary);
                 font-weight: var(--fw-bold);
                 font-size: var(--fs-200);
                 color: var(--clr-accent-400);
-                // margin-bottom: 1.5rem;
             }
             .accordion-button{
                 font-family: var(--ff-tertiary);
@@ -29,9 +27,49 @@
                 strong {
                     color: var(--clr-accent-400);
                 }
+        }
+
+    }
+}
+    @media only screen and (min-width: 1020px) {
+
+        .main-section-about{
+            width: 100%;
+            box-sizing: border-box;
+            display: grid;
+            grid-template-columns: auto 60% auto;
+            .about-us-section{
+                width: 80%;
+                grid-column-start: 2;
+                grid-column-end: 3;
+                margin-top: 4rem;
+                // margin-right: 18rem;
+                h2{
+                    font-family: var(--ff-tertiary);
+                    font-weight: var(--fw-bold);
+                    font-size: var(--fs-200);
+                    color: var(--clr-accent-400);
+                    // margin-bottom: 1.5rem;
+                }
+                .accordion-button{
+                    font-family: var(--ff-tertiary);
+                    font-size: var(--fs-100);
+                    font-weight: var(--fw-regular);
+                    border-top: 5px solid var(--clr-icons-400);
+                    color: var(--clr-accent-400);
+                }
+                .accordion-body{
+                    padding-top: 2rem;
+                    padding-inline: 2rem;
+                    strong {
+                        color: var(--clr-accent-400);
+                    }
+                }
             }
         }
+
     }
+    
 }
 
 body{

@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component, useState, useEffect } from "react";
 import styled from 'styled-components'
 import '../styles/Home.css'
 import '../styles/Styles.css'
@@ -7,12 +7,16 @@ import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import 'bootstrap/dist/css/bootstrap.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faEnvelope, faPhone, faLock } from '@fortawesome/free-solid-svg-icons';
+import { faEnvelope, faPhone, faLock, faBars, faLocationPin } from '@fortawesome/free-solid-svg-icons';
 import { faFacebook, faInstagram, faTwitter } from '@fortawesome/free-brands-svg-icons';
 import Dropdown from 'react-bootstrap/Dropdown';
-
+import { toggleClass } from "rsuite/esm/DOMHelper";
 
 // function Home() {
+
+// const [initial, final] = useState()
+// function handleChange(){   
+// }
 class Home extends Component {
 constructor(props){
     super(props);
@@ -35,15 +39,19 @@ render(){
     <div className='Main'>
         <header class="primary-header">
             <div class="wrapper-header">
-                <nav class="secondary-nav">
-                    <ul class="secondary-nav-contact">
-                        <li><i><FontAwesomeIcon icon={faPhone} className="fa-solid" color='rgb(245,245,245' size='lg'></FontAwesomeIcon></i><a href="https://www.viber.com/en/?utm_source=des_w&utm_medium=w8&utm_term=4226&utm_content=dlg">Text/Viber: 09263524939</a></li>
-                        <li><i><FontAwesomeIcon icon={faEnvelope} className="fa-solid" color='rgb(245,245,245' size='lg'></FontAwesomeIcon></i><a href="https://mail.google.com/mail/u/0/#inbox">pcadrchelpdesk@mail.pca.gov.ph</a></li>
-                    </ul>
-                    <ul class="secondary-nav-login">
-                        <li><i><FontAwesomeIcon icon={faLock} className="fa-solid" color='rgb(245,245,245' size='lg'></FontAwesomeIcon></i><a href="http://localhost:3000/login">LOGIN</a></li>
-                    </ul>
-                </nav>
+                <div class="secondary-nav-wrapper">
+                    <nav class="secondary-nav">
+                        <ul class="secondary-nav-contact">
+                            <li><i><FontAwesomeIcon icon={faPhone} className="fa-solid" color='rgb(245,245,245' size='lg'></FontAwesomeIcon></i><a href="https://www.viber.com/en/?utm_source=des_w&utm_medium=w8&utm_term=4226&utm_content=dlg">Text/Viber: 09263524939</a></li>
+                            <li><i><FontAwesomeIcon icon={faEnvelope} className="fa-solid" color='rgb(245,245,245' size='lg'></FontAwesomeIcon></i><a href="https://mail.google.com/mail/u/0/#inbox">pcadrchelpdesk@mail.pca.gov.ph</a></li>
+                        </ul>
+                        <ul class="secondary-nav-login">
+                            <li><i><FontAwesomeIcon icon={faLock} className="fa-solid" color='rgb(245,245,245' size='lg'></FontAwesomeIcon></i><a href="http://localhost:3000/login">LOGIN</a></li>
+                        </ul>
+                    </nav>
+        
+                </div>
+               
                 <div class="primary-nav-wrapper">
                      <h1 class="logo"><a href=""><img src="" alt=""></img>GOV.PH</a></h1>
                 <nav class="primary-nav">
@@ -67,15 +75,29 @@ render(){
                         <li><a href="http://localhost:3000/contact">Contact</a></li>
                     </ul>
                 </nav>
-                </div>
+                    {/* <div class="hamburger-Container"> */}
+                        <button class="hamburger-container-btn">
+                            <i><FontAwesomeIcon icon={faBars} className="faBars" color='rgb(245,245,245' size='lg'></FontAwesomeIcon></i>
+                         {/* <div onChange={handleChange} class="bars"></div> */}
+                        </button>
+                    {/* </div>  */}
+                </div>   
             </div>
         </header>
+        <nav class=" primary-nav-Mobile">
+                <ul>
+                    <li><a href="http://localhost:3000/">Home</a></li>
+                    <li><a href="">Resources</a></li>
+                    <li><a href="http://localhost:3000/about">About</a></li>
+                    <li><a href="http://localhost:3000/contact">Contact</a></li>
+                </ul>
+        </nav>
         <section class="pca-logo-section">
             <div class="wrapper-pca-logo">
                 <h1 class="pcaLogo"><a href="#"><img src="./pcalogo.png" alt=""></img></a></h1>
                 <div class="pca-logo-txt">
                     <h4>Department of Agriculture</h4>
-                    <h1 class="primaryHeader">PHILIPPINE COCONUT AUTHORITY</h1>
+                    <h4 class="primaryHeader">PHILIPPINE COCONUT AUTHORITY</h4>
                     <h4>PCA-DRC Compound, Bago Oshiro Tugbok, Davao City</h4>
                 </div>
             </div>
@@ -124,7 +146,7 @@ render(){
                     <Card.Img class= 'img' variant="top" src="./rhinoB.jpg" />
                     </div>
                     <div class="col2">
-                    <Card.Title>Integrated Management of Rhinoceros Beetle (Orycetes rhinoceros L.)</Card.Title>
+                    <Card.Title class="title-txt">Integrated Management of Rhinoceros Beetle (Orycetes rhinoceros L.)</Card.Title>
                     <Card.Text>
                     Pest and Disease Management
                     </Card.Text>
@@ -141,7 +163,7 @@ render(){
                     <Card.Img class= 'img' variant="top" src="./coconutE.jpg" />
                     </div>
                     <div class="col2">
-                    <Card.Title>91.4B PHP Average Export Earnings</Card.Title>
+                    <Card.Title  class="title-txt">91.4B PHP Average Export Earnings</Card.Title>
                     <Card.Text>
                     Philippine Cocout Industry
                     </Card.Text>
@@ -158,7 +180,7 @@ render(){
                     <Card.Img class= 'img' variant="top" src="./asiaticPW.jpg" />
                     </div>
                     <div class="col2">
-                    <Card.Title>Asiatic Palm Weevil</Card.Title>
+                    <Card.Title  class="title-txt">Asiatic Palm Weevil</Card.Title>
                     <Card.Text>
                     Coconut Pests
                     </Card.Text>
@@ -175,7 +197,7 @@ render(){
                     <Card.Img class= 'img' variant="top" src="./budRot.jpg" />
                     </div>
                     <div class="col2">
-                    <Card.Title>Bud and Nut Rot in Coconut</Card.Title>
+                    <Card.Title  class="title-txt">Bud and Nut Rot in Coconut</Card.Title>
                     <Card.Text>
                     Coconut Diseases and Damages
                     </Card.Text>
@@ -192,9 +214,9 @@ render(){
         </section>
         <section class="logos">
             <ul>
-                <li><a href=""><img src="./TS.jpg" alt=""></img></a></li>
-                <li><a href=""><img src="./FS.png" alt=""></img></a></li>
-                <li><a href=""><img src="./CS.png" alt=""></img></a></li>
+                <li><a href=""><img class="img1" src="./TS.jpg" alt=""></img></a></li>
+                <li><a href=""><img class="img2" src="./FS.png" alt=""></img></a></li>
+                <li><a href=""><img class="img3" src="./CS.png" alt=""></img></a></li>
             </ul>
         </section>
         <section class="accordion-pcadrc">
@@ -202,7 +224,7 @@ render(){
                 <div class="davao-research-center-wrapper">
                     <h3>DAVAO RESEARCH CENTER</h3>
                     <div class="loc-wrapper">
-                        <h2><a href=""><i class="fa-solid fa-location-dot"></i></a></h2>
+                        <h2><a href=""><i><FontAwesomeIcon icon={faLocationPin} className="fa-solid" color='rgb(245,245,245' size='lg'></FontAwesomeIcon></i></a></h2>
                         <h4>Trade & Industry Building <br/>
                             361 Senator Gil J. Puyat Avenue, <br/>
                             Makati City, Metro Manila <br/>
@@ -210,7 +232,7 @@ render(){
                         </h4>    
                     </div>   
                     <ul>
-                    <li><a href=""><i><FontAwesomeIcon icon={faFacebook}  className="fa-solid" color='rgb(245,245,245' size='lg'></FontAwesomeIcon></i></a></li>
+                    <li><a href="https://www.facebook.com/pca.drc2017"><i><FontAwesomeIcon icon={faFacebook}  className="fa-solid" color='rgb(245,245,245' size='lg'></FontAwesomeIcon></i></a></li>
                         <li><a href=""><i><FontAwesomeIcon icon={faInstagram} className="fa-solid" color='rgb(245,245,245' size='lg'></FontAwesomeIcon></i></a></li>
                         <li><a href=""><i><FontAwesomeIcon icon={faTwitter} className="fa-solid" color='rgb(245,245,245' size='lg'></FontAwesomeIcon></i></a></li>
                     </ul> 

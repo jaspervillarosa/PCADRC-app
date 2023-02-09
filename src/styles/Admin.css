@@ -1,21 +1,19 @@
 body .main-section-admin {
-  display: grid;
-  grid-template-columns: auto 60% auto;
-  width: 100%;
-}
-body .main-section-admin .database-editor-section {
-  grid-column-start: 2;
-  grid-column-end: 3;
-  margin-top: 2rem;
+  margin-bottom: 3rem;
   width: 90%;
+  margin-left: auto;
+  margin-right: auto;
 }
-body .main-section-admin .database-editor-section h1 {
+body .main-section-admin .no-wrap-class {
+  white-space: nowrap;
+}
+body .main-section-admin h1 {
   font-family: var(--ff-tertiary);
-  font-size: var(--fs-secondary-heading);
+  font-size: var(--fs-200);
   color: var(--clr-accent-400);
   font-weight: var(--fw-bold);
 }
-body .main-section-admin .database-editor-section ul {
+body .main-section-admin ul {
   list-style-type: none;
   display: unset;
   display: flex;
@@ -24,7 +22,7 @@ body .main-section-admin .database-editor-section ul {
   padding-bottom: 0.45rem;
   border-bottom: 2px solid var(--clr-primary-200);
 }
-body .main-section-admin .database-editor-section ul li a {
+body .main-section-admin ul li a {
   text-decoration: none;
   color: var(--clr-accent-500);
   transition: background-color 0.5s;
@@ -35,7 +33,7 @@ body .main-section-admin .database-editor-section ul li a {
   font-size: var(--fs-50);
   border-radius: 5px;
 }
-body .main-section-admin .database-editor-section ul li a:hover {
+body .main-section-admin ul li a:hover {
   border-top: 2px solid var(--clr-primary-200);
   border-left: 2px solid var(--clr-primary-200);
   border-right: 2px solid var(--clr-primary-200);
@@ -43,7 +41,7 @@ body .main-section-admin .database-editor-section ul li a:hover {
   background-color: white;
   border-radius: 5px;
 }
-body .main-section-admin .database-editor-section ul li a.active {
+body .main-section-admin ul li a.active {
   border-top: 2px solid var(--clr-primary-200);
   border-left: 2px solid var(--clr-primary-200);
   border-right: 2px solid var(--clr-primary-200);
@@ -51,81 +49,82 @@ body .main-section-admin .database-editor-section ul li a.active {
   background-color: white;
   border-radius: 5px;
 }
-body .main-section-admin .database-editor-section .database-wrappers h4 {
+body .main-section-admin .database-wrappers h4 {
   font-size: var(--fs-200);
   color: var(--clr-accent-400);
   font-family: var(--ff-tertiary);
+  margin-bottom: 1rem;
 }
-body .main-section-admin .database-editor-section .database-wrappers .search-inputs-database h2 {
+body .main-section-admin .database-wrappers .search-inputs-database h2 {
   font-size: var(--fs-50);
 }
-body .main-section-admin .database-editor-section .database-wrappers .search-inputs-database .inputs-wrapper {
+body .main-section-admin .database-wrappers .search-inputs-database .inputs-wrapper {
   display: unset;
   display: flex;
   gap: 2rem;
 }
-body .main-section-admin .database-editor-section .database-wrappers .search-inputs-database .inputs-wrapper .inputs-wrapper-inside {
+body .main-section-admin .database-wrappers .search-inputs-database .inputs-wrapper .inputs-wrapper-inside {
   width: 100%;
 }
-body .main-section-admin .database-editor-section .database-wrappers .search-inputs-database .inputs-wrapper .inputs-wrapper-inside h5 {
+body .main-section-admin .database-wrappers .search-inputs-database .inputs-wrapper .inputs-wrapper-inside h5 {
   font-size: var(--fs-50);
   font-family: var(--ff-tertiary);
 }
-body .main-section-admin .database-editor-section .database-wrappers .search-inputs-database .inputs-wrapper .inputs-wrapper-inside input {
+body .main-section-admin .database-wrappers .search-inputs-database .inputs-wrapper .inputs-wrapper-inside input {
   width: 100%;
   font-size: var(--fs-50);
 }
-body .main-section-admin .database-editor-section .database-wrappers .search-inputs-database .btn {
+body .main-section-admin .database-wrappers .search-inputs-database .btn {
   font-size: var(--fs-10);
   padding-block: 0.5rem;
   padding-inline: 1rem;
   margin-bottom: 1rem;
 }
-body .main-section-admin .database-editor-section .database-wrappers .search-inputs-database .btn:hover {
+body .main-section-admin .database-wrappers .search-inputs-database .btn:hover {
   background-color: var(--clr-accent-500);
 }
-body .main-section-admin .database-editor-section .database-wrappers .add-button-database-wrapper span {
+body .main-section-admin .database-wrappers .add-button-database-wrapper span {
   font-weight: var(--fw-bold);
 }
-body .main-section-admin .database-editor-section .database-wrappers .add-button-database-wrapper .btn {
+body .main-section-admin .database-wrappers .add-button-database-wrapper .btn {
   font-family: var(--ff-tertiary);
   font-size: var(--fs-50);
   font-weight: var(--fw-regular);
   transition: background-color 0.5s;
   border: transparent;
 }
-body .main-section-admin .database-editor-section .database-wrappers .add-button-database-wrapper .btn a {
+body .main-section-admin .database-wrappers .add-button-database-wrapper .btn a {
   text-decoration: none;
   color: var(--clr-neutral-100);
 }
-body .main-section-admin .database-editor-section .database-wrappers .add-button-database-wrapper .btn:hover {
+body .main-section-admin .database-wrappers .add-button-database-wrapper .btn:hover {
   background-color: var(--clr-icons-400);
   color: var(--clr-primary-500);
 }
-body .main-section-admin .database-editor-section .database-wrappers .table-datasets-wrapper {
+body .main-section-admin .database-wrappers .table-datasets-wrapper {
   margin-top: 2rem;
 }
-body .main-section-admin .database-editor-section .database-wrappers .table-datasets-wrapper thead {
+body .main-section-admin .database-wrappers .table-datasets-wrapper thead {
   font-weight: var(--fw-bold);
   border-top: solid transparent;
 }
-body .main-section-admin .database-editor-section .database-wrappers .table-datasets-wrapper thead th {
+body .main-section-admin .database-wrappers .table-datasets-wrapper thead th {
   font-size: var(--fs-10);
 }
-body .main-section-admin .database-editor-section .database-wrappers .table-group-divider tr {
+body .main-section-admin .database-wrappers .table-group-divider tr {
   background-color: transparent;
 }
-body .main-section-admin .database-editor-section .database-wrappers .table-group-divider td {
+body .main-section-admin .database-wrappers .table-group-divider td {
   font-size: var(--fs-10);
   word-wrap: break-word;
   border-top: solid transparent;
   background-color: transparent;
 }
-body .main-section-admin .database-editor-section .database-wrappers .table-group-divider td a {
+body .main-section-admin .database-wrappers .table-group-divider td a {
   gap: 2rem;
   line-height: 1.5rem;
 }
-body .main-section-admin .database-editor-section .database-wrappers .table-group-divider td a .fa-solid {
+body .main-section-admin .database-wrappers .table-group-divider td a .fa-solid {
   color: var(--clr-primary-50);
   font-size: var(--fs-10);
   margin-right: 0.5rem;
@@ -133,9 +132,152 @@ body .main-section-admin .database-editor-section .database-wrappers .table-grou
   border-radius: 50%;
   padding: 0.225rem;
 }
-body .main-section-admin .database-editor-section .database-wrappers .table-group-divider td img {
+body .main-section-admin .database-wrappers .table-group-divider td img {
   max-width: 100px;
   max-height: 100px;
   width: auto;
   height: auto;
+}
+@media only screen and (min-width: 1020px) {
+  body .main-section-admin {
+    display: grid;
+    grid-template-columns: auto 60% auto;
+    width: 100%;
+  }
+  body .main-section-admin .database-editor-section {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    margin-top: 2rem;
+    width: 90%;
+  }
+  body .main-section-admin .database-editor-section h1 {
+    font-family: var(--ff-tertiary);
+    font-size: var(--fs-secondary-heading);
+    color: var(--clr-accent-400);
+    font-weight: var(--fw-bold);
+  }
+  body .main-section-admin .database-editor-section ul {
+    list-style-type: none;
+    display: unset;
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 2rem;
+    padding-bottom: 0.45rem;
+    border-bottom: 2px solid var(--clr-primary-200);
+  }
+  body .main-section-admin .database-editor-section ul li a {
+    text-decoration: none;
+    color: var(--clr-accent-500);
+    transition: background-color 0.5s;
+    background-color: transparent;
+    padding-block: 0.75rem;
+    padding-inline: 1rem;
+    font-family: var(--ff-tertiary);
+    font-size: var(--fs-50);
+    border-radius: 5px;
+  }
+  body .main-section-admin .database-editor-section ul li a:hover {
+    border-top: 2px solid var(--clr-primary-200);
+    border-left: 2px solid var(--clr-primary-200);
+    border-right: 2px solid var(--clr-primary-200);
+    border-bottom: 2px solid transparent;
+    background-color: white;
+    border-radius: 5px;
+  }
+  body .main-section-admin .database-editor-section ul li a.active {
+    border-top: 2px solid var(--clr-primary-200);
+    border-left: 2px solid var(--clr-primary-200);
+    border-right: 2px solid var(--clr-primary-200);
+    border-bottom: 2px solid transparent;
+    background-color: white;
+    border-radius: 5px;
+  }
+  body .main-section-admin .database-editor-section .database-wrappers h4 {
+    font-size: var(--fs-200);
+    color: var(--clr-accent-400);
+    font-family: var(--ff-tertiary);
+  }
+  body .main-section-admin .database-editor-section .database-wrappers .search-inputs-database h2 {
+    font-size: var(--fs-50);
+  }
+  body .main-section-admin .database-editor-section .database-wrappers .search-inputs-database .inputs-wrapper {
+    display: unset;
+    display: flex;
+    gap: 2rem;
+  }
+  body .main-section-admin .database-editor-section .database-wrappers .search-inputs-database .inputs-wrapper .inputs-wrapper-inside {
+    width: 100%;
+  }
+  body .main-section-admin .database-editor-section .database-wrappers .search-inputs-database .inputs-wrapper .inputs-wrapper-inside h5 {
+    font-size: var(--fs-50);
+    font-family: var(--ff-tertiary);
+  }
+  body .main-section-admin .database-editor-section .database-wrappers .search-inputs-database .inputs-wrapper .inputs-wrapper-inside input {
+    width: 100%;
+    font-size: var(--fs-50);
+  }
+  body .main-section-admin .database-editor-section .database-wrappers .search-inputs-database .btn {
+    font-size: var(--fs-10);
+    padding-block: 0.5rem;
+    padding-inline: 1rem;
+    margin-bottom: 1rem;
+  }
+  body .main-section-admin .database-editor-section .database-wrappers .search-inputs-database .btn:hover {
+    background-color: var(--clr-accent-500);
+  }
+  body .main-section-admin .database-editor-section .database-wrappers .add-button-database-wrapper span {
+    font-weight: var(--fw-bold);
+  }
+  body .main-section-admin .database-editor-section .database-wrappers .add-button-database-wrapper .btn {
+    font-family: var(--ff-tertiary);
+    font-size: var(--fs-50);
+    font-weight: var(--fw-regular);
+    transition: background-color 0.5s;
+    border: transparent;
+  }
+  body .main-section-admin .database-editor-section .database-wrappers .add-button-database-wrapper .btn a {
+    text-decoration: none;
+    color: var(--clr-neutral-100);
+  }
+  body .main-section-admin .database-editor-section .database-wrappers .add-button-database-wrapper .btn:hover {
+    background-color: var(--clr-icons-400);
+    color: var(--clr-primary-500);
+  }
+  body .main-section-admin .database-editor-section .database-wrappers .table-datasets-wrapper {
+    margin-top: 2rem;
+  }
+  body .main-section-admin .database-editor-section .database-wrappers .table-datasets-wrapper thead {
+    font-weight: var(--fw-bold);
+    border-top: solid transparent;
+  }
+  body .main-section-admin .database-editor-section .database-wrappers .table-datasets-wrapper thead th {
+    font-size: var(--fs-10);
+  }
+  body .main-section-admin .database-editor-section .database-wrappers .table-group-divider tr {
+    background-color: transparent;
+  }
+  body .main-section-admin .database-editor-section .database-wrappers .table-group-divider td {
+    font-size: var(--fs-10);
+    word-wrap: break-word;
+    border-top: solid transparent;
+    background-color: transparent;
+  }
+  body .main-section-admin .database-editor-section .database-wrappers .table-group-divider td a {
+    gap: 2rem;
+    line-height: 1.5rem;
+  }
+  body .main-section-admin .database-editor-section .database-wrappers .table-group-divider td a .fa-solid {
+    color: var(--clr-primary-50);
+    font-size: var(--fs-10);
+    margin-right: 0.5rem;
+    border: 1px solid var(--clr-primary-200);
+    border-radius: 50%;
+    padding: 0.225rem;
+  }
+  body .main-section-admin .database-editor-section .database-wrappers .table-group-divider td img {
+    max-width: 100px;
+    max-height: 100px;
+    width: auto;
+    height: auto;
+  }
 }/*# sourceMappingURL=Admin.css.map */

@@ -1,12 +1,10 @@
 body .main-section-add-data {
-  display: grid;
-  margin-top: 4rem;
-  grid-template-columns: auto 60% auto;
+  margin-block: 2.5rem;
 }
 body .main-section-add-data .form-wrapper {
-  grid-column-start: 2;
-  grid-column-end: 3;
-  margin-right: 15rem;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
 }
 body .main-section-add-data .form-wrapper Label {
   font-size: var(--fs-100);
@@ -19,4 +17,28 @@ body .main-section-add-data .form-wrapper button {
 }
 body .main-section-add-data .form-wrapper button:hover {
   background-color: var(--clr-icons-400);
+}
+@media only screen and (min-width: 1020px) {
+  body .main-section-add-data {
+    display: grid;
+    margin-top: 4rem;
+    grid-template-columns: auto 60% auto;
+  }
+  body .main-section-add-data .form-wrapper {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    margin-right: 15rem;
+  }
+  body .main-section-add-data .form-wrapper Label {
+    font-size: var(--fs-100);
+    font-weight: var(--fw-semi-bold);
+    margin-left: 5px;
+  }
+  body .main-section-add-data .form-wrapper button {
+    background-color: var(--clr-accent-400);
+    border: transparent;
+  }
+  body .main-section-add-data .form-wrapper button:hover {
+    background-color: var(--clr-icons-400);
+  }
 }/*# sourceMappingURL=AddDisease.css.map */

@@ -3,6 +3,12 @@ const app = express();
 const cors = require('cors');
 const mongoose = require('mongoose');
 
+//jwttoken
+//OTP
+//hash
+//basic government id for verification
+//bcrypt
+
 app.use(cors());
 app.use(express.json());
 

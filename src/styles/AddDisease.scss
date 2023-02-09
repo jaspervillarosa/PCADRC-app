@@ -1,12 +1,11 @@
 @mixin add-disease-style{
+
     .main-section-add-data{
-        display: grid;
-        margin-top: 4rem;
-        grid-template-columns: auto 60% auto;
+        margin-block: 2.5rem;
         .form-wrapper{
-            grid-column-start: 2;
-            grid-column-end: 3;
-            margin-right: 15rem;
+            width: 80%;
+            margin-left: auto;
+            margin-right: auto;
             Label{
                 font-size: var(--fs-100);
                 font-weight: var(--fw-semi-bold);
@@ -21,6 +20,31 @@
             }
         }
     }
+
+    @media only screen and (min-width: 1020px){
+        .main-section-add-data{
+            display: grid;
+            margin-top: 4rem;
+            grid-template-columns: auto 60% auto;
+            .form-wrapper{
+                grid-column-start: 2;
+                grid-column-end: 3;
+                margin-right: 15rem;
+                Label{
+                    font-size: var(--fs-100);
+                    font-weight: var(--fw-semi-bold);
+                    margin-left: 5px;
+                }
+                button{
+                    background-color: var(--clr-accent-400);
+                    border: transparent;
+                    &:hover{
+                        background-color: var(--clr-icons-400);
+                    }
+                }
+            }
+        }
+    } 
 };
 
 body{
