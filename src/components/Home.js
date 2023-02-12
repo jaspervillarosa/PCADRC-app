@@ -110,8 +110,6 @@ render(){
                 </ul>
             </div>
         </Menu>
-                        
-       
    
         <section class="pca-logo-section">
             <div class="wrapper-pca-logo">

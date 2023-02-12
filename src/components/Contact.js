@@ -97,7 +97,7 @@ render(){
         </header>
         
         {/* for mobile menu  */}
-         <Menu>  
+         <Menu  right >  
             <div 
                 isOpen={this.state.menuOpen}
                 onStateChange={(state) => this.handleStateChange(state)}

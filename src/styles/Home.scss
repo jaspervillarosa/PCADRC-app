@@ -43,13 +43,13 @@
         }
 
     }
-    .bm-menu-wrap{
+    .bm-menu-wrap, .primary-nav-Mobile{
         position: fixed !important;
         // transform: ${ ({open}) => open ? 'translateX(0)' : 'translateX(-100%)'};
         padding-top: 2rem;
         min-height: 100%;
         width: 100% !important;
-        z-index: -999999;
+        z-index: 999999;
         transition: 0.4s;
         background-color:  lightgrey !important;
         ul{
