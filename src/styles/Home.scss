@@ -43,16 +43,15 @@
         }
 
     }
-    .primary-nav-Mobile{
-
+    .bm-menu-wrap{
+        position: fixed !important;
+        // transform: ${ ({open}) => open ? 'translateX(0)' : 'translateX(-100%)'};
         padding-top: 2rem;
-        min-height: 100vh;
-        width: 100%;
-        z-index: 99;
-        display: flex;
-        justify-content: flex-start;
+        min-height: 100%;
+        width: 100% !important;
+        z-index: -999999;
         transition: 0.4s;
-        background-color: var(--clr-accent-600);
+        background-color:  lightgrey !important;
         ul{
             list-style-type: none;
             margin-top: 2rem;
@@ -63,14 +62,14 @@
                     color: var(--clr-neutral-700);
                     font-weight: var(--fw-semi-bold);
                     border-radius: 10px;
-                    width: 100%;
                     padding-block: 0.5rem;
+                    width: 500%;
                     padding-left: 2rem;
-                    padding-right:18rem;
+                    padding-right:20rem;
+                    font-family: var(--ff-tertiary);
 
                     &:hover{
                         background-color: var(--clr-primary-50);
-                        color: var(--clr-primary-600);
                     }
                 }
             }
@@ -78,7 +77,8 @@
     }
     .pca-logo-section{
 
-        width: 90%;
+        margin-top: 4rem;
+        width: 84%;
         margin-left: auto;
         margin-right: auto;
         .wrapper-pca-logo{
@@ -129,13 +129,15 @@
                 }
                 ul{
                     list-style-type: none;
+                    width: 100%;
                     margin-top: 1rem;
                     a{
+                        width: 100%;
                         text-decoration: none;
                         color: var(--clr-neutral-700);
                         &:hover{
                             text-decoration: underline;
-                            color: var(--clr-accent-500);
+                            color: var(--clr-accent-400);
                         }
                     }
                 }

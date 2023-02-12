@@ -10,6 +10,7 @@ import Login from './components/Login';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import AddDisease from './components/AddDisease';
 import SignUp from './components/SignUp';
+// import { Burger } from './components/Burger';
 
 function App() {
   return (

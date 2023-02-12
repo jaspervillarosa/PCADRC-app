@@ -27,39 +27,39 @@ body .primary-header .primary-nav-wrapper .hamburger-container-btn .faBars {
 body .primary-header .primary-nav-wrapper .hamburger-container-btn .faBars:hover {
   color: var(--clr-primary-400);
 }
-body .primary-nav-Mobile {
+body .bm-menu-wrap {
+  position: fixed !important;
   padding-top: 2rem;
-  min-height: 100vh;
-  width: 100%;
-  z-index: 99;
-  display: flex;
-  justify-content: flex-start;
+  min-height: 100%;
+  width: 100% !important;
+  z-index: -999999;
   transition: 0.4s;
-  background-color: var(--clr-accent-600);
+  background-color: lightgrey !important;
 }
-body .primary-nav-Mobile ul {
+body .bm-menu-wrap ul {
   list-style-type: none;
   margin-top: 2rem;
 }
-body .primary-nav-Mobile ul li {
+body .bm-menu-wrap ul li {
   margin-top: 2rem;
 }
-body .primary-nav-Mobile ul li a {
+body .bm-menu-wrap ul li a {
   text-decoration: none;
   color: var(--clr-neutral-700);
   font-weight: var(--fw-semi-bold);
   border-radius: 10px;
-  width: 100%;
   padding-block: 0.5rem;
+  width: 500%;
   padding-left: 2rem;
-  padding-right: 18rem;
+  padding-right: 20rem;
+  font-family: var(--ff-tertiary);
 }
-body .primary-nav-Mobile ul li a:hover {
+body .bm-menu-wrap ul li a:hover {
   background-color: var(--clr-primary-50);
-  color: var(--clr-primary-600);
 }
 body .pca-logo-section {
-  width: 90%;
+  margin-top: 4rem;
+  width: 84%;
   margin-left: auto;
   margin-right: auto;
 }
@@ -106,15 +106,17 @@ body .main-section-home .side-nav-wrapper .side-nav-bar h1 {
 }
 body .main-section-home .side-nav-wrapper .side-nav-bar ul {
   list-style-type: none;
+  width: 100%;
   margin-top: 1rem;
 }
 body .main-section-home .side-nav-wrapper .side-nav-bar ul a {
+  width: 100%;
   text-decoration: none;
   color: var(--clr-neutral-700);
 }
 body .main-section-home .side-nav-wrapper .side-nav-bar ul a:hover {
   text-decoration: underline;
-  color: var(--clr-accent-500);
+  color: var(--clr-accent-400);
 }
 body .main-section-data h2 {
   font-size: var(--fs-300);

@@ -7,21 +7,36 @@ import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import 'bootstrap/dist/css/bootstrap.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faEnvelope, faPhone, faLock, faBars, faLocationPin } from '@fortawesome/free-solid-svg-icons';
+import { faEnvelope, faPhone, faLock, faBars, faLocationPin, faX } from '@fortawesome/free-solid-svg-icons';
 import { faFacebook, faInstagram, faTwitter } from '@fortawesome/free-brands-svg-icons';
 import Dropdown from 'react-bootstrap/Dropdown';
 import { toggleClass } from "rsuite/esm/DOMHelper";
+import { slide as Menu , handleOnOpen, CustomIcon, shouldDisableOverlayClick, handleOpen, isOpen } from 'react-burger-menu'
 
-// function Home() {
-
-// const [initial, final] = useState()
-// function handleChange(){   
-// }
 class Home extends Component {
-constructor(props){
-    super(props);
-} 
+    
+constructor (props) {
+        super(props)
+        this.state = {
+          menuOpen: false
+        }
+      }
+
+handleStateChange (state) {
+    this.setState({menuOpen: state.isOpen})  
+      }
+
+closeMenu () {
+    this.setState({menuOpen: false})
+      }
+
+handleOnOpen () {
+    this.setState(state => ({menuOpen: !state.menuOpen}))
+      }
+
+
 componentDidMount(){
+
         (function(d, m){
             var kommunicateSettings =
                 {"appId":"fde63e6fc4a64dee640357d630a378f","popupWidget":true,"automaticChatOpenOnNavigation":true};
@@ -31,8 +46,6 @@ componentDidMount(){
             window.kommunicate = m; m._globals = kommunicateSettings;
         })(document, window.kommunicate || {});
      }
-
-       
 
 render(){
   return (
@@ -46,7 +59,7 @@ render(){
                             <li><i><FontAwesomeIcon icon={faEnvelope} className="fa-solid" color='rgb(245,245,245' size='lg'></FontAwesomeIcon></i><a href="https://mail.google.com/mail/u/0/#inbox">pcadrchelpdesk@mail.pca.gov.ph</a></li>
                         </ul>
                         <ul class="secondary-nav-login">
-                            <li><i><FontAwesomeIcon icon={faLock} className="fa-solid" color='rgb(245,245,245' size='lg'></FontAwesomeIcon></i><a href="http://localhost:3000/login">LOGIN</a></li>
+                            <li><i><FontAwesomeIcon onClick={() => this.toggleMenu()} icon={faLock} className="fa-solid" color='rgb(245,245,245' size='lg'></FontAwesomeIcon></i><a href="http://localhost:3000/login">LOGIN</a></li>
                         </ul>
                     </nav>
         
@@ -75,23 +88,31 @@ render(){
                         <li><a href="http://localhost:3000/contact">Contact</a></li>
                     </ul>
                 </nav>
-                    {/* <div class="hamburger-Container"> */}
+                        
                         <button class="hamburger-container-btn">
-                            <i><FontAwesomeIcon icon={faBars} className="faBars" color='rgb(245,245,245' size='lg'></FontAwesomeIcon></i>
-                         {/* <div onChange={handleChange} class="bars"></div> */}
+                            <i><FontAwesomeIcon onClick={() => this.handleOnOpen()}  icon={faBars} className="faBars" color='rgb(245,245,245' size='lg'></FontAwesomeIcon></i> 
                         </button>
-                    {/* </div>  */}
                 </div>   
             </div>
         </header>
-        <nav class=" primary-nav-Mobile">
+        
+        {/* for mobile menu  */}
+         <Menu  right onOpen = { handleOnOpen} onClose={handleOnOpen} isOpen={isOpen} disableOverlayClick noTransition >  
+            <div 
+                isOpen={this.state.menuOpen}
+                onStateChange={(state) => this.handleStateChange(state)}
+                >
                 <ul>
-                    <li><a href="http://localhost:3000/">Home</a></li>
-                    <li><a href="">Resources</a></li>
-                    <li><a href="http://localhost:3000/about">About</a></li>
-                    <li><a href="http://localhost:3000/contact">Contact</a></li>
+                    <li><a href="http://localhost:3000/admin" onClick={() => this.closeMenu()}>Home</a></li> 
+                    <li> <a  href="http://localhost:3000/admin" onClick={() => this.closeMenu()}>Resources</a></li>
+                    <li><a href="http://localhost:3000/about" onClick={() => this.closeMenu()}>About</a></li> 
+                    <li><a href="http://localhost:3000/contact" onClick={() => this.closeMenu()}>Contact</a></li> 
                 </ul>
-        </nav>
+            </div>
+        </Menu>
+                        
+       
+   
         <section class="pca-logo-section">
             <div class="wrapper-pca-logo">
                 <h1 class="pcaLogo"><a href="#"><img src="./pcalogo.png" alt=""></img></a></h1>

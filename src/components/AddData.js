@@ -110,7 +110,7 @@ function AddData() {
         <nav class=" primary-nav-Mobile">
                 <ul>
                     <li><a href="http://localhost:3000/">Home</a></li>
-                    <li><a href="">Resources</a></li>
+                    <li><a href="http://localhost:3000/admin">Resources</a></li>
                     <li><a href="http://localhost:3000/about">About</a></li>
                     <li><a href="http://localhost:3000/contact">Contact</a></li>
                 </ul>

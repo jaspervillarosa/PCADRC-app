@@ -12,27 +12,45 @@ import { faFacebook, faInstagram, faTwitter } from '@fortawesome/free-brands-svg
 import '../styles/About.css'
 import Accordion from 'react-bootstrap/Accordion';
 import Dropdown from 'react-bootstrap/Dropdown';
+import { slide as Menu } from 'react-burger-menu'
 
 class About extends Component {
-    constructor(props){
-        super(props);
-    } 
-    componentDidMount(){
-            (function(d, m){
-                var kommunicateSettings =
-                    {"appId":"fde63e6fc4a64dee640357d630a378f","popupWidget":true,"automaticChatOpenOnNavigation":true};
-                var s = document.createElement("script"); s.type = "text/javascript"; s.async = true;
-                s.src = "https://widget.kommunicate.io/v2/kommunicate.app";
-                var h = document.getElementsByTagName("head")[0]; h.appendChild(s);
-                window.kommunicate = m; m._globals = kommunicateSettings;
-            })(document, window.kommunicate || {});
-         }
-    
-           
-    
+ 
+    constructor (props) {
+        super(props)
+        this.state = {
+          menuOpen: false
+        }
+      }
+
+handleStateChange (state) {
+    this.setState({menuOpen: state.isOpen})  
+      }
+
+closeMenu () {
+    this.setState({menuOpen: false})
+      }
+
+toggleMenu () {
+    this.setState(state => ({menuOpen: !state.menuOpen}))
+      }
+
+
+componentDidMount(){
+
+        (function(d, m){
+            var kommunicateSettings =
+                {"appId":"fde63e6fc4a64dee640357d630a378f","popupWidget":true,"automaticChatOpenOnNavigation":true};
+            var s = document.createElement("script"); s.type = "text/javascript"; s.async = true;
+            s.src = "https://widget.kommunicate.io/v2/kommunicate.app";
+            var h = document.getElementsByTagName("head")[0]; h.appendChild(s);
+            window.kommunicate = m; m._globals = kommunicateSettings;
+        })(document, window.kommunicate || {});
+     }
+
 render(){
   return (
-    <div className='About-page'>
+    <div className='Main'>
         <header class="primary-header">
             <div class="wrapper-header">
                 <div class="secondary-nav-wrapper">
@@ -71,23 +89,28 @@ render(){
                         <li><a href="http://localhost:3000/contact">Contact</a></li>
                     </ul>
                 </nav>
-                    {/* <div class="hamburger-Container"> */}
-                        <button class="hamburger-container-btn">
-                            <i><FontAwesomeIcon icon={faBars} className="faBars" color='rgb(245,245,245' size='lg'></FontAwesomeIcon></i>
-                         {/* <div onChange={handleChange} class="bars"></div> */}
+                        
+                        <button onClick={() => this.toggleMenu()} class="hamburger-container-btn">
+                            <i><FontAwesomeIcon icon={faBars} className="faBars" color='rgb(245,245,245' size='lg'></FontAwesomeIcon></i> 
                         </button>
-                    {/* </div>  */}
                 </div>   
             </div>
         </header>
-        <nav class=" primary-nav-Mobile">
+        
+        {/* for mobile menu  */}
+         <Menu>  
+            <div 
+                isOpen={this.state.menuOpen}
+                onStateChange={(state) => this.handleStateChange(state)}
+                >
                 <ul>
-                    <li><a href="http://localhost:3000/">Home</a></li>
-                    <li><a href="">Resources</a></li>
-                    <li><a href="http://localhost:3000/about">About</a></li>
-                    <li><a href="http://localhost:3000/contact">Contact</a></li>
+                    <li><a href="http://localhost:3000/" onClick={() => this.closeMenu()}>Home</a></li> 
+                    <li> <a  href="http://localhost:3000/admin" onClick={() => this.closeMenu()}>Resources</a></li>
+                    <li><a href="http://localhost:3000/about" onClick={() => this.closeMenu()}>About</a></li> 
+                    <li><a href="http://localhost:3000/contact" onClick={() => this.closeMenu()}>Contact</a></li> 
                 </ul>
-        </nav>
+            </div>
+        </Menu>
         <section class="pca-logo-section">
             <div class="wrapper-pca-logo">
                 <h1 class="pcaLogo"><a href="#"><img src="./pcalogo.png" alt=""></img></a></h1>
