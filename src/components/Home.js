@@ -22,17 +22,17 @@ constructor (props) {
         }
       }
 
-handleStateChange (state) {
-    this.setState({menuOpen: state.isOpen})  
-      }
+// handleStateChange (state) {
+//     this.setState({menuOpen: state.isOpen})  
+//       }
 
-closeMenu () {
-    this.setState({menuOpen: false})
-      }
+// closeMenu () {
+//     this.setState({menuOpen: false})
+//       }
 
-handleOnOpen () {
-    this.setState(state => ({menuOpen: !state.menuOpen}))
-      }
+// handleOnOpen () {
+//     this.setState(state => ({menuOpen: !state.menuOpen}))
+//       }
 
 
 componentDidMount(){
@@ -96,7 +96,7 @@ render(){
             </div>
         </header>
         
-        {/* for mobile menu  */}
+        {/* for mobile menu 
          <Menu  right onOpen = { handleOnOpen} onClose={handleOnOpen} isOpen={isOpen} disableOverlayClick noTransition >  
             <div 
                 isOpen={this.state.menuOpen}
@@ -109,7 +109,7 @@ render(){
                     <li><a href="http://localhost:3000/contact" onClick={() => this.closeMenu()}>Contact</a></li> 
                 </ul>
             </div>
-        </Menu>
+        </Menu> */}
    
         <section class="pca-logo-section">
             <div class="wrapper-pca-logo">

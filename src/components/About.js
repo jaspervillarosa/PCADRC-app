@@ -23,17 +23,17 @@ class About extends Component {
         }
       }
 
-handleStateChange (state) {
-    this.setState({menuOpen: state.isOpen})  
-      }
+// handleStateChange (state) {
+//     this.setState({menuOpen: state.isOpen})  
+//       }
 
-closeMenu () {
-    this.setState({menuOpen: false})
-      }
+// closeMenu () {
+//     this.setState({menuOpen: false})
+//       }
 
-toggleMenu () {
-    this.setState(state => ({menuOpen: !state.menuOpen}))
-      }
+// toggleMenu () {
+//     this.setState(state => ({menuOpen: !state.menuOpen}))
+//       }
 
 
 componentDidMount(){
@@ -97,7 +97,7 @@ render(){
             </div>
         </header>
         
-        {/* for mobile menu  */}
+        {/* for mobile menu 
          <Menu  right >  
             <div 
                 isOpen={this.state.menuOpen}
@@ -110,7 +110,7 @@ render(){
                     <li><a href="http://localhost:3000/contact" onClick={() => this.closeMenu()}>Contact</a></li> 
                 </ul>
             </div>
-        </Menu>
+        </Menu> */}
         <section class="pca-logo-section">
             <div class="wrapper-pca-logo">
                 <h1 class="pcaLogo"><a href="#"><img src="./pcalogo.png" alt=""></img></a></h1>
